@@ -375,6 +375,14 @@ export default function StudentDashboardPage() {
         title="Student Dashboard"
         description="Upload your answer sheets, track submission status, open your previous files, and view marks and lecturer comments once feedback is released."
         accent="blue"
+        action={
+          <button
+            onClick={handleLogout}
+            className="rounded-xl bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/15"
+          >
+            Logout
+          </button>
+        }
       />
 
       <section className="mx-auto w-full max-w-[1150px] px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
@@ -412,25 +420,16 @@ export default function StudentDashboardPage() {
           </div>
 
           <div className="rounded-[24px] bg-[linear-gradient(135deg,#08111d_0%,#10233a_55%,#13263e_100%)] p-6 text-white shadow-2xl shadow-slate-400/20">
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <p className="text-xs font-semibold tracking-[0.18em] text-[#9ae22d]">
-                  FEEDBACK RELEASED
-                </p>
-                <p className="mt-3 text-2xl font-extrabold">
-                  {feedbackReleasedCount}
-                </p>
-                <p className="mt-2 text-sm text-white/70">
-                  Ready to review
-                </p>
-              </div>
-
-              <button
-                onClick={handleLogout}
-                className="rounded-xl bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/15"
-              >
-                Logout
-              </button>
+            <div>
+              <p className="text-xs font-semibold tracking-[0.18em] text-[#9ae22d]">
+                FEEDBACK RELEASED
+              </p>
+              <p className="mt-3 text-2xl font-extrabold">
+                {feedbackReleasedCount}
+              </p>
+              <p className="mt-2 text-sm text-white/70">
+                Ready to review
+              </p>
             </div>
           </div>
         </div>
